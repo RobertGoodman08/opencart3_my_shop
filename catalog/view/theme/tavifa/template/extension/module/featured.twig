@@ -1,0 +1,38 @@
+<section class="featured-products">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="section-title">{{ heading_title }}</h3>
+            </div>
+
+            {% for product in products %}
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="{{ product.href }}">{{ product.name }}</a></h4>
+                            <p>{{ product.description }}</p>
+                            <div class="product-bottom-details d-flex justify-content-between">
+                                <div class="product-price">
+                                    {% if not product.special %}
+                                        {{ product.price }}
+                                    {% else %}
+                                        <small>{{ product.price }}</small>
+                                        {{ product.special }}
+                                    {% endif %}
+                                </div>
+                                <div class="product-links">
+                                    <a href="#" onclick="cart.add('{{ product.product_id }}'); return false;"><i class="fas fa-shopping-cart"></i></a>
+                                    <a href="#" onclick="wishlist.add('{{ product.product_id }}'); return false;"><i class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+{% if modules %}
+    <div class="col-lg-3 sidebar">
+        <div class="sidebar-toggler mb-2">
+            <button class="btn btn-light" type="button">Категории <i class="fas fa-chevron-circle-down"></i></button>
+        </div>
+        <div class="sidebar-toggle sticky-top">
+            {% for module in modules %}
+                {{ module }}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

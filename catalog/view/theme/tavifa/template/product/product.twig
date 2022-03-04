@@ -1,0 +1,322 @@
+{{ header }}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-light p-2">
+            {% for breadcrumb in breadcrumbs %}
+                <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+            {% endfor %}
+        </ol>
+    </nav>
+</div>
+
+<div class="container py-3">
+    <div class="row">
+
+        <div class="col-md-4 order-md-2">
+
+            <h1>{{ heading_title }}</h1>
+            <ul class="list-unstyled">
+                <li>
+                    {% if qty <= 0 %}
+                        <i class="fas fa-shipping-fast text-muted"></i>
+                    {% else %}
+                        <i class="fas fa-check text-success"></i>
+                    {% endif %}
+                    {{ stock }}
+                </li>
+                <li><i class="fas fa-hand-holding-usd"></i>
+                    <span class="product-price">
+                        {% if not special %}
+                            {{ price }}
+                        {% else %}
+                            <small>{{ price }}</small>
+                            {{ special }}
+                        {% endif %}
+                    </span>
+                </li>
+            </ul>
+
+            <div id="product">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="quantity" value="{{ minimum }}" id="input-quantity">
+                    <input type="hidden" name="product_id" value="{{ product_id }}" />
+                    <button class="btn btn-danger" type="button" id="button-cart">{{ button_cart }}</button>
+                </div>
+                {% if minimum > 1 %}
+                    <div class="alert alert-info"><i class="fa fa-info-circle"></i> {{ text_minimum }}</div>
+                {% endif %}
+            </div>
+
+        </div>
+
+        <div class="col-md-8 order-md-1">
+
+            {% if thumb or images %}
+                <ul class="thumbnails list-unstyled clearfix">
+                    {% if thumb %}
+                        <li class="thumb-main text-center">
+                            <a class="thumbnail" href="{{ popup }}" data-effect="mfp-zoom-in"><img src="{{ thumb }}"
+                                                                                                   alt=""></a>
+                        </li>
+                    {% endif %}
+
+                    {% if images %}
+                        {% for image in images %}
+                            <li class="thumb-additional">
+                                <a class="thumbnail" href="{{ image.popup }}" data-effect="mfp-zoom-in"><img
+                                            src="{{ image.thumb }}" alt=""></a>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            {% endif %}
+
+            <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#description"
+                            type="button">{{ tab_description }}</button>
+                </li>
+                {% if attribute_groups %}
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#specification"
+                                type="button">{{ tab_attribute }}</button>
+                    </li>
+                {% endif %}
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="description">
+                    {{ description }}
+                </div>
+
+                {% if attribute_groups %}
+                    <div class="tab-pane fade" id="specification">
+                        <table class="table table-bordered">
+                            {% for attribute_group in attribute_groups %}
+                                <thead>
+                                <tr>
+                                    <td colspan="2"><strong>{{ attribute_group.name }}</strong></td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for attribute in attribute_group.attribute %}
+                                    <tr>
+                                        <td>{{ attribute.name }}</td>
+                                        <td>{{ attribute.text }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript"><!--
+    $('select[name=\'recurring_id\'], input[name="quantity"]').change(function () {
+        $.ajax({
+            url: 'index.php?route=product/product/getRecurringDescription',
+            type: 'post',
+            data: $('input[name=\'product_id\'], input[name=\'quantity\'], select[name=\'recurring_id\']'),
+            dataType: 'json',
+            beforeSend: function () {
+                $('#recurring-description').html('');
+            },
+            success: function (json) {
+                $('.alert-dismissible, .text-danger').remove();
+
+                if (json['success']) {
+                    $('#recurring-description').html(json['success']);
+                }
+            }
+        });
+    });
+    //--></script>
+<script type="text/javascript"><!--
+    $('#button-cart').on('click', function () {
+        $.ajax({
+            url: 'index.php?route=checkout/cart/add',
+            type: 'post',
+            data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+            dataType: 'json',
+            beforeSend: function () {
+                $('#button-cart').button('loading');
+            },
+            complete: function () {
+                $('#button-cart').button('reset');
+            },
+            success: function (json) {
+                $('.alert-dismissible, .text-danger').remove();
+                $('.form-group').removeClass('has-error');
+
+                if (json['error']) {
+                    if (json['error']['option']) {
+                        for (i in json['error']['option']) {
+                            var element = $('#input-option' + i.replace('_', '-'));
+
+                            if (element.parent().hasClass('input-group')) {
+                                element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                            } else {
+                                element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                            }
+                        }
+                    }
+
+                    if (json['error']['recurring']) {
+                        $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+                    }
+
+                    // Highlight any found errors
+                    $('.text-danger').parent().addClass('has-error');
+                }
+
+                if (json['success']) {
+                    $('.count-items').html(json['total']);
+
+                    $('#cart-modal .modal-body').load('index.php?route=common/cart/info .in-cart');
+                    new bootstrap.Modal(document.getElementById('cart-modal')).show();
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    });
+    //--></script>
+<script type="text/javascript"><!--
+    $('.date').datetimepicker({
+        language: '{{ datepicker }}',
+        pickTime: false
+    });
+
+    $('.datetime').datetimepicker({
+        language: '{{ datepicker }}',
+        pickDate: true,
+        pickTime: true
+    });
+
+    $('.time').datetimepicker({
+        language: '{{ datepicker }}',
+        pickDate: false
+    });
+
+    $('button[id^=\'button-upload\']').on('click', function () {
+        var node = this;
+
+        $('#form-upload').remove();
+
+        $('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+        $('#form-upload input[name=\'file\']').trigger('click');
+
+        if (typeof timer != 'undefined') {
+            clearInterval(timer);
+        }
+
+        timer = setInterval(function () {
+            if ($('#form-upload input[name=\'file\']').val() != '') {
+                clearInterval(timer);
+
+                $.ajax({
+                    url: 'index.php?route=tool/upload',
+                    type: 'post',
+                    dataType: 'json',
+                    data: new FormData($('#form-upload')[0]),
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function () {
+                        $(node).button('loading');
+                    },
+                    complete: function () {
+                        $(node).button('reset');
+                    },
+                    success: function (json) {
+                        $('.text-danger').remove();
+
+                        if (json['error']) {
+                            $(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
+                        }
+
+                        if (json['success']) {
+                            alert(json['success']);
+
+                            $(node).parent().find('input').val(json['code']);
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                    }
+                });
+            }
+        }, 500);
+    });
+    //--></script>
+<script type="text/javascript"><!--
+    $('#review').delegate('.pagination a', 'click', function (e) {
+        e.preventDefault();
+
+        $('#review').fadeOut('slow');
+
+        $('#review').load(this.href);
+
+        $('#review').fadeIn('slow');
+    });
+
+    $('#review').load('index.php?route=product/product/review&product_id={{ product_id }}');
+
+    $('#button-review').on('click', function () {
+        $.ajax({
+            url: 'index.php?route=product/product/write&product_id={{ product_id }}',
+            type: 'post',
+            dataType: 'json',
+            data: $("#form-review").serialize(),
+            beforeSend: function () {
+                $('#button-review').button('loading');
+            },
+            complete: function () {
+                $('#button-review').button('reset');
+            },
+            success: function (json) {
+                $('.alert-dismissible').remove();
+
+                if (json['error']) {
+                    $('#review').after('<div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+                }
+
+                if (json['success']) {
+                    $('#review').after('<div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+
+                    $('input[name=\'name\']').val('');
+                    $('textarea[name=\'text\']').val('');
+                    $('input[name=\'rating\']:checked').prop('checked', false);
+                }
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('.thumbnails').magnificPopup({
+            type: 'image',
+            delegate: 'a',
+            gallery: {
+                enabled: true
+            },
+            removalDelay: 500,
+            callbacks: {
+                beforeOpen: function () {
+                    this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+                    this.st.mainClass = this.st.el.attr('data-effect');
+                }
+            }
+        });
+    });
+    //--></script>
+
+{{ footer }}

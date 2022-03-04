@@ -1,0 +1,89 @@
+2022-02-25 21:01:26 - PHP Warning:  mysqli::__construct(): (HY000/2002): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:01:53 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:01:53 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:01:54 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:01:54 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:01:54 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:01:54 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:01:54 - PHP Warning:  mkdir(): File exists in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 54
+2022-02-25 21:01:54 - PHP Warning:  mkdir(): File exists in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 54
+2022-02-25 21:01:54 - PHP Warning:  mkdir(): File exists in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 54
+2022-02-25 21:01:54 - PHP Warning:  mkdir(): File exists in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 54
+2022-02-25 21:01:54 - PHP Warning:  mkdir(): File exists in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 54
+2022-02-25 21:01:55 - PHP Warning:  rename(C:\OpenServer\domains\open\system\storage\cache\template\d5\d52666B.tmp,C:/OpenServer/domains/open/system/storage/cache/template/d5/d52ea01b6ce79b29134a62a3b80ea8d23aad2e591b040fe053ec3d56c689e144.php): Отказано в доступе (code: 5) in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 65
+2022-02-25 21:02:25 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:02:25 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:02:25 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:03:15 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:03:15 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:03:15 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:05:03 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:05:04 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:05:04 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:05:13 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:05:13 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:05:13 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:06:46 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:06:46 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:06:46 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:06:55 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:06:55 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:06:55 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:07:05 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:07:05 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:07:05 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:07:44 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:07:44 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:07:44 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:07:45 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:07:45 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:07:45 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:07:55 - PHP Unknown:  Using the "Twig_Loader_Array" class is deprecated since Twig version 2.7, use "Twig\Loader\ArrayLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Array.php on line 7
+2022-02-25 21:07:55 - PHP Unknown:  Using the "Twig_Loader_Filesystem" class is deprecated since Twig version 2.7, use "Twig\Loader\FilesystemLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Filesystem.php on line 7
+2022-02-25 21:07:55 - PHP Unknown:  Using the "Twig_Loader_Chain" class is deprecated since Twig version 2.7, use "Twig\Loader\ChainLoader" instead. in C:\OpenServer\domains\open\system\storage\vendor\twig\twig\lib\Twig\Loader\Chain.php on line 7
+2022-02-25 21:16:17 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:16:22 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:16:39 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:16:46 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:16:55 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:16:56 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:16:57 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:16:57 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:16:59 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:16:59 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:01 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:02 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:06 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:17 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:17 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:21 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:22 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:22 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:22 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:27 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-25 21:17:36 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-02-27 20:48:04 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7
+2022-03-03 2:41:02 - PHP Warning:  mysqli::__construct(): (HY000/2002): ��������� �� �����������, �.�. ������ ������� ������ ������ �� ���������.
+ in C:\OpenServer\domains\open\system\library\db\mysqli.php on line 7

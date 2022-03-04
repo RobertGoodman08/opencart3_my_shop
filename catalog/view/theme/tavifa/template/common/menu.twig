@@ -1,0 +1,27 @@
+{% if categories %}
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            {% for category in categories %}
+                {% if category.children %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{ category.href }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ category.name }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% for child in category.children %}
+                                <li><a class="dropdown-item" href="{{ child.href }}">{{ child.name }}</a></li>
+                            {% endfor %}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a href="{{ category.href }}" class="dropdown-item">{{ text_all }} {{ category.name }}</a></li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ category.href }}">{{ category.name }}</a>
+                    </li>
+                {% endif %}
+
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

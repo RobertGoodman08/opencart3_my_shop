@@ -1,0 +1,23 @@
+<div class="list-group">
+    {% if not logged %}
+        <a href="{{ login }}" class="list-group-item list-group-item-action">{{ text_login }}</a> <a href="{{ register }}"
+                                                                                                     class="list-group-item list-group-item-action">{{ text_register }}</a>
+        <a href="{{ forgotten }}" class="list-group-item list-group-item-action">{{ text_forgotten }}</a>
+    {% endif %}
+    <a href="{{ account }}" class="list-group-item list-group-item-action">{{ text_account }}</a>
+    {% if logged %}
+        <a href="{{ edit }}" class="list-group-item list-group-item-action">{{ text_edit }}</a> <a href="{{ password }}"
+                                                                                                   class="list-group-item list-group-item-action">{{ text_password }}</a>
+    {% endif %}
+    <a href="{{ address }}" class="list-group-item list-group-item-action">{{ text_address }}</a> <a href="{{ wishlist }}"
+                                                                                                     class="list-group-item list-group-item-action">{{ text_wishlist }}</a>
+    <a
+            href="{{ recurring }}" class="list-group-item list-group-item-action">{{ text_recurring }}</a> <a href="{{ reward }}"
+                                                                                                              class="list-group-item list-group-item-action">{{ text_reward }}</a>
+    <a href="{{ return }}" class="list-group-item list-group-item-action">{{ text_return }}</a> <a href="{{ transaction }}"
+                                                                                                   class="list-group-item list-group-item-action">{{ text_transaction }}</a>
+    <a href="{{ newsletter }}" class="list-group-item list-group-item-action">{{ text_newsletter }}</a>
+    {% if logged %}
+        <a href="{{ logout }}" class="list-group-item list-group-item-action">{{ text_logout }}</a>
+    {% endif %}
+</div>

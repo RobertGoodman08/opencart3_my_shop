@@ -1,0 +1,83 @@
+<a href="#" data-bs-toggle="modal" data-bs-target="#cart-modal" class="open-cart-modal">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="badge bg-danger rounded-pill count-items">{{ text_items }}</span>
+</a>
+
+<div class="modal fade" id="cart-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="in-cart">
+
+                    {% if products or vouchers %}
+                        <table class="table text-start">
+                            {% for product in products %}
+                                <tr>
+                                    <td>
+                                        {% if product.thumb %}
+                                            <a href="{{ product.href }}">
+                                                <img
+                                                    src="{{ product.thumb }}" alt="{{ product.name }}"
+                                                    title="{{ product.name }}">
+                                            </a>
+                                        {% endif %}
+                                    </td>
+                                    <td><a
+                                                href="{{ product.href }}">{{ product.name }}</a> {% if product.option %}
+                                            {% for option in product.option %} <br/>
+                                                - <small>{{ option.name }} {{ option.value }}</small> {% endfor %}
+                                        {% endif %}
+                                        {% if product.recurring %} <br/>
+                                            - <small>{{ text_recurring }} {{ product.recurring }}</small> {% endif %}
+                                    </td>
+                                    <td>{{ product.price }}</td>
+                                    <td>x {{ product.quantity }}</td>
+                                    <td>{{ product.total }}</td>
+                                    <td>
+                                        <button type="button" onclick="cart.remove('{{ product.cart_id }}');"
+                                                title="{{ button_remove }}" class="btn btn-danger btn-xs"><i
+                                                    class="fa fa-times"></i></button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            {% for voucher in vouchers %}
+                                <tr>
+                                    <td></td>
+                                    <td>{{ voucher.description }}</td>
+                                    <td>x&nbsp;1</td>
+                                    <td>{{ voucher.amount }}</td>
+                                    <td>
+                                        <button type="button" onclick="voucher.remove('{{ voucher.key }}');"
+                                                title="{{ button_remove }}" class="btn btn-danger btn-xs"><i
+                                                    class="fa fa-times"></i></button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                        <div>
+                            <table class="table table-bordered">
+                                {% for total in totals %}
+                                    <tr>
+                                        <td class="text-right"><strong>{{ total.title }}</strong></td>
+                                        <td class="text-right">{{ total.text }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% else %}
+                        <p class="text-center">{{ text_empty }}</p>
+                    {% endif %}
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Продолжить покупки</button>
+                <a href="{{ checkout }}" class="btn btn-primary">{{ text_checkout }}</a>
+            </div>
+        </div>
+    </div>
+</div>
